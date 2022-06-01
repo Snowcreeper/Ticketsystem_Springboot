@@ -6,15 +6,8 @@
 
 Use a Mac, Linux, WSL2 or git bash console.
 
-<br/>
 
-```
-git clone https://github.com/mbachmann/demo-initial-2022-teko
-cd file-system-storage
-git checkout docker
-./mvnw clean package
-java -jar target/demo-initial*.jar
-```
+
 
 <br/>
 
