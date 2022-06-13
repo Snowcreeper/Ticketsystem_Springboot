@@ -45,6 +45,9 @@ public class DevConfiguration implements HasLogger {
     @Autowired
     ProjectRepository projectRepository;
 
+    @Autowired
+    UserRepository userRepository;
+
     public DevConfiguration() {
         getLogger().info("Dev Configuration Class");
 
@@ -66,7 +69,13 @@ public class DevConfiguration implements HasLogger {
         createEmployeeMaxMustermann();
         assignMaxMustermannToDesignProject();
         assignMaxMustermannAsChef();
+        createUserData();
 
+    }
+
+    private void createUserData() {
+        User user = new User("Felix Muster", "felix.muster@example.com");
+        userRepository.save(user);
     }
 
 
