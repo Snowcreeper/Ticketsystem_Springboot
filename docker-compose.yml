@@ -5,7 +5,7 @@ version: '2'
 services:
 
   hello-rest-h2:
-    image: uportal/demo-initial:latest
+    image: sn0wcr33per/demo-initial:latest
     labels:
       - "traefik.backend=demo-initial-h2"
       - "traefik.frontend.rule=Host:demo-initial-h2.united-portal.com"

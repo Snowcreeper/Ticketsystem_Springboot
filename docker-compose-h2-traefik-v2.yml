@@ -8,11 +8,11 @@ networks:
 services:
 
   demoinitial:
-    image: uportal/demo-initial:latest
+    image: sn0wcr33per/demo-initial:latest
     labels:
-      - "traefik.http.routers.demoinitial.rule=Host(`${DEMO_INITIAL_URL}`)"
-      - "traefik.http.routers.demoinitial.tls=true"
-      - "traefik.http.routers.demoinitial.tls.certresolver=lets-encrypt"
+      - "traefik.http.routers.ticketsystem.rule=Host(`${DEMO_INITIAL_URL}`)"
+      - "traefik.http.routers.ticketsystem.tls=true"
+      - "traefik.http.routers.ticketsystem.tls.certresolver=lets-encrypt"
       - "traefik.port=8080"
     restart: always
     networks:
@@ -23,4 +23,4 @@ services:
       APP_NAME: Demo Initial with Spring Boot and H2
       ACTIVE_PROFILES: dev,h2
       APP_URL: "https://${DEMO_INITIAL_URL}"
-    container_name: demoinitial
+    container_name: ticketsystem
